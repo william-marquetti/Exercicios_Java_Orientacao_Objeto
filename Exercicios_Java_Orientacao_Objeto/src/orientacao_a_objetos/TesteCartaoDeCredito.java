@@ -1,20 +1,25 @@
 package orientacao_a_objetos;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 public class TesteCartaoDeCredito {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
 		
 		// criando os objetos
 		CartaoDeCredito masterCard = new CartaoDeCredito();
 		CartaoDeCredito visa = new CartaoDeCredito();
 		
-		visa.numero = 4502036512123003l;
-		visa.dataValidade = "03/26";
+		visa.numero = "4502036512123003";
+		visa.dataValidade = sdf.parse("08/03/2026");
 		
-		masterCard.numero = 650236520143003l;
-		masterCard.dataValidade = "03/26";
+		masterCard.numero = "650236520143003";
+		masterCard.dataValidade = sdf.parse("01/03/2026");
 				
-		System.out.println("Mastercard: "+ masterCard.numero + " valido até: "+ masterCard.dataValidade);
-		System.out.println("Mastercard: "+ visa.numero + " valido até: "+ visa.dataValidade);
+		System.out.println("Mastercard: "+ masterCard.numero + " valido até: "+ sdf.format(masterCard.dataValidade));
+		System.out.println("Visa: "+ visa.numero + " valido até: "+ sdf.format(visa.dataValidade));
 		
 	}
 }
