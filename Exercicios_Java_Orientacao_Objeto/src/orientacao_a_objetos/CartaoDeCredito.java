@@ -5,6 +5,6 @@ import java.util.Date;
 public class CartaoDeCredito {
 	String numero;
 	Date dataValidade;
-	int codigoCliente;
+	Cliente cliente;
 
 }
