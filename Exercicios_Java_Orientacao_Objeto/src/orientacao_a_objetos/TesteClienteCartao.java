@@ -9,16 +9,16 @@ public class TesteClienteCartao {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
 		
 		CartaoDeCredito cdc = new CartaoDeCredito();
-		
 		Cliente cliente1 = new Cliente();
 		
-		cdc.cliente = cliente1;
-		
-		cdc.cliente.nome = "William";
-		cdc.cliente.codigo = 3;
 		cdc.numero = "5715172568441";
 		cdc.dataValidade = sdf.parse("05/07/2018");
 		
+		cliente1.nome = "William";
+		cliente1.codigo = 3;
+		
+		cdc.cliente = cliente1;
+
 		CartaoDeCredito cdc2 = new CartaoDeCredito();
 		
 		Cliente cliente2 = new Cliente();

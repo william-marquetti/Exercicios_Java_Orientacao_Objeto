@@ -12,8 +12,12 @@ public class TesteFuncionario {
 		fun2.nome = "Maria";
 		fun2.salario = 1900d;
 		
-		System.out.println("Nome: "+ fun1.nome + " salário: "+ fun1.salario);
-		System.out.println("Nome: "+ fun2.nome + " salário: "+ fun2.salario);
+		System.out.println(fun1.consultaFuncionario());
+		fun1.aumentarSalario(200);
+		System.out.println(fun1.consultaFuncionario());
+		
+//		System.out.println("Nome: "+ fun1.nome + " salário: "+ fun1.salario);
+//		System.out.println("Nome: "+ fun2.nome + " salário: "+ fun2.salario);
 	}
 
 }

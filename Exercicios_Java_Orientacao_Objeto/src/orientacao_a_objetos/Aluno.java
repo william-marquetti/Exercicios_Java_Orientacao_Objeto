@@ -6,5 +6,5 @@ public class Aluno {
 	String nome;
 	String rg;
 	Date dataNascimento;
-
+	Turma turma;
 }
