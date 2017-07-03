@@ -3,17 +3,21 @@ package orientacao_a_objetos;
 import java.text.DecimalFormat;
 
 public class Conta {
+	
+	DecimalFormat df = new DecimalFormat("#0.00");
+	
 	String numero;
 	double saldo;
 	double limite = 100d;
 	Agencia agencia;
 	
-	void deposita ( double valor ){
+	public void deposita ( double valor ){
 		this.saldo += valor;
 	}
 	
-	void saque ( double valor ){
+	public void saque ( double valor ){
 		this.saldo -= valor;
+
 	}
 	
 	public double consultaSaldo(){
@@ -22,11 +26,24 @@ public class Conta {
 	}
 	
 	public String extrato(){
-		DecimalFormat df = new DecimalFormat("#0.00");
 		String extrato = "Conta: "+ this.numero +"\nAgência: "+ this.agencia.numero +"\nSaldo: R$"+ df.format(this.saldo) +" \nLimite: R$"+ df.format(this.limite);
 		return extrato;
 	}
 	
+	public Conta(String numero) {
+		this.numero = numero;
+	}
+
+	public Conta(String numero, Agencia agencia) {
+		this(numero);
+		this.agencia = agencia;
+		
+	}
+	
+	public void transferencia(Conta destino, double valor){
+		this.saldo -= valor;
+		destino.saldo += valor;
+	}
 	
 }
 

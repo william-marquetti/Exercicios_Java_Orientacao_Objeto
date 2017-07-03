@@ -7,4 +7,7 @@ public class CartaoDeCredito {
 	Date dataValidade;
 	Cliente cliente;
 
+	public CartaoDeCredito(String numero) {
+		this.numero = numero;
+	}
 }

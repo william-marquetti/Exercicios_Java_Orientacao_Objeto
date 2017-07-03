@@ -8,10 +8,9 @@ public class TesteClienteCartao {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
 		
-		CartaoDeCredito cdc = new CartaoDeCredito();
+		CartaoDeCredito cdc = new CartaoDeCredito("5715172568441");
 		Cliente cliente1 = new Cliente();
 		
-		cdc.numero = "5715172568441";
 		cdc.dataValidade = sdf.parse("05/07/2018");
 		
 		cliente1.nome = "William";
@@ -19,7 +18,7 @@ public class TesteClienteCartao {
 		
 		cdc.cliente = cliente1;
 
-		CartaoDeCredito cdc2 = new CartaoDeCredito();
+		CartaoDeCredito cdc2 = new CartaoDeCredito("15151515115");
 		
 		Cliente cliente2 = new Cliente();
 		
@@ -27,7 +26,6 @@ public class TesteClienteCartao {
 		
 		cdc2.cliente.nome = "Andiara";
 		cdc2.cliente.codigo = 4;
-		cdc2.numero = "15151515115";
 		cdc2.dataValidade = sdf.parse("05/12/2018");
 		
 		System.out.println("Cliente: "+ cdc.cliente.nome + " número do cartão: "+  cdc.numero + " data de validade: "+ sdf.format(cdc.dataValidade));

@@ -9,13 +9,10 @@ public class TesteCartaoDeCredito {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
 		
 		// criando os objetos
-		CartaoDeCredito masterCard = new CartaoDeCredito();
-		CartaoDeCredito visa = new CartaoDeCredito();
+		CartaoDeCredito masterCard = new CartaoDeCredito("650236520143003");
+		CartaoDeCredito visa = new CartaoDeCredito("4502036512123003");
 		
-		visa.numero = "4502036512123003";
 		visa.dataValidade = sdf.parse("08/03/2026");
-		
-		masterCard.numero = "650236520143003";
 		masterCard.dataValidade = sdf.parse("01/03/2026");
 				
 		System.out.println("Mastercard: "+ masterCard.numero + " valido até: "+ sdf.format(masterCard.dataValidade));
