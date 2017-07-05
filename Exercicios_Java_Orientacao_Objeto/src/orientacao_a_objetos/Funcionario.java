@@ -7,6 +7,7 @@ public class Funcionario {
 	
 	String nome;
 	double salario = 1000d;
+	static double valeRefeicao = 15d;
 	
 	void aumentarSalario(double valor){
 		this.salario += valor;
@@ -15,6 +16,10 @@ public class Funcionario {
 	public String consultaFuncionario(){
 		String funcionario = "Nome: "+ this.nome +" salário: R$ "+ df.format(this.salario);
 		return funcionario;
+	}
+	
+	public static double consultaVR(){
+		return Funcionario.valeRefeicao;
 	}
 	
 }

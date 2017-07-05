@@ -27,5 +27,7 @@ public class TesteConta {
 				
 		System.out.println("Conta1 saldo: "+ conta1.saldo);
 		System.out.println("Conta2 saldo: "+ conta2.saldo);
+		
+		System.out.println(Conta.totalContas());
 	}
 }
