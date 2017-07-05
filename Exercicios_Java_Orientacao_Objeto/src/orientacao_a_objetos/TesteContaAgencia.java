@@ -8,11 +8,11 @@ public class TesteContaAgencia {
 		Agencia ag1 = new Agencia(6255565);
 		Conta conta1 = new Conta("4545454545", ag1);
 		Conta conta2 = new Conta("5558787", ag1);
-		conta1.limite = 300d;
-		conta1.saldo = 565.65d;
+		conta1.setLimite(300d);
+		conta1.setSaldo(565.65d); 
 
-		conta2.limite = 150;
-		conta2.saldo = 475.65d;	
+		conta2.setLimite(150);
+		conta2.setSaldo(475.65d);	
 	
 		System.out.println(conta1.extrato());
 		

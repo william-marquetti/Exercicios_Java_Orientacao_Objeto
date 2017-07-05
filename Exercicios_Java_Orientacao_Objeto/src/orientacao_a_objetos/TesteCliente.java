@@ -9,15 +9,15 @@ public class TesteCliente {
 		Cliente cliente2 = new Cliente(); 
 		
 		// atribuindo valores 
-		cliente1.nome = "William";
-		cliente1.codigo = 1;
+		cliente1.setNome("William");
+		cliente1.setCodigo(1);
 		
-		cliente2.nome = "Andiara";
-		cliente2.codigo = 2;
+		cliente2.setNome("Andiara");
+		cliente2.setCodigo(2);
 		
-		System.out.println("Cliente 1: "+ cliente1.nome + " Código: " + cliente1.codigo);
+		System.out.println("Cliente 1: "+ cliente1.getNome() + " Código: " + cliente1.getCodigo());
 		
-		System.out.println("Cliente 2: "+ cliente2.nome + " Código: " + cliente2.codigo);
+		System.out.println("Cliente 2: "+ cliente2.getNome() + " Código: " + cliente2.getCodigo());
 		
 	}
 }

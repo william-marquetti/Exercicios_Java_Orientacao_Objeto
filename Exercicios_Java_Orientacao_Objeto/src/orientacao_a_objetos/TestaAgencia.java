@@ -7,7 +7,7 @@ public class TestaAgencia {
 		
 		Agencia ag2 = new Agencia(15156);
 				
-		System.out.println("Agência 1: "+ ag1.numero);
-		System.out.println("Agência 2: "+ ag2.numero);
+		System.out.println("Agência 1: "+ ag1.getNumero());
+		System.out.println("Agência 2: "+ ag2.getNumero());
 	}
 }

@@ -12,11 +12,11 @@ public class TesteCartaoDeCredito {
 		CartaoDeCredito masterCard = new CartaoDeCredito("650236520143003");
 		CartaoDeCredito visa = new CartaoDeCredito("4502036512123003");
 		
-		visa.dataValidade = sdf.parse("08/03/2026");
-		masterCard.dataValidade = sdf.parse("01/03/2026");
+		visa.setDataValidade(sdf.parse("08/03/2026"));
+		masterCard.setDataValidade(sdf.parse("01/03/2026"));
 				
-		System.out.println("Mastercard: "+ masterCard.numero + " valido até: "+ sdf.format(masterCard.dataValidade));
-		System.out.println("Visa: "+ visa.numero + " valido até: "+ sdf.format(visa.dataValidade));
+		System.out.println("Mastercard: "+ masterCard.getNumero() + " valido até: "+ sdf.format(masterCard.getDataValidade()));
+		System.out.println("Visa: "+ visa.getNumero() + " valido até: "+ sdf.format(visa.getDataValidade()));
 		
 	}
 }

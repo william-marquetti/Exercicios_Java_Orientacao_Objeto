@@ -12,17 +12,17 @@ public class TesteAluno {
 		Aluno aluno1 = new Aluno();
 		Aluno aluno2 = new Aluno();
 		
-		aluno1.dataNascimento = sdf.parse("30/03/1993");
-		aluno1.nome = "William";
-		aluno1.rg = "0151678";
+		aluno1.setDataNascimento(sdf.parse("30/03/1993"));
+		aluno1.setNome("William");
+		aluno1.setRg("0151678");
 		
-		aluno2.dataNascimento = sdf.parse("31/10/1995");
-		aluno2.nome = "Andiara";
-		aluno2.rg = "1565321";
+		aluno2.setDataNascimento(sdf.parse("31/10/1995"));
+		aluno2.setNome("Andiara");
+		aluno2.setRg("1565321");
 		
 		
-		System.out.println("Aluno 1: "+ aluno1.nome +" data de nascimento: "+ sdf.format(aluno1.dataNascimento) + " rg: "+ aluno1.rg);
-		System.out.println("Aluno 2: "+ aluno2.nome +" data de nascimento: "+ sdf.format(aluno2.dataNascimento) + " rg: "+ aluno2.rg);
+		System.out.println("Aluno 1: "+ aluno1.getNome() +" data de nascimento: "+ sdf.format(aluno1.getDataNascimento()) + " rg: "+ aluno1.getRg());
+		System.out.println("Aluno 2: "+ aluno2.getNome() +" data de nascimento: "+ sdf.format(aluno2.getDataNascimento()) + " rg: "+ aluno2.getRg());
 		
 	}
 }

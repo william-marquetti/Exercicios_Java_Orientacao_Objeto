@@ -6,13 +6,55 @@ public class Conta {
 	
 	DecimalFormat df = new DecimalFormat("#0.00");
 	
-	String numero;
-	double saldo;
-	double limite = 100d;
-	Agencia agencia;
-	static int contasCriadas;
-	int idConta;
+	private String numero;
+	private double saldo;
+	private double limite = 100d;
+	private Agencia agencia;
+	public static int contasCriadas;
+	private int idConta;
 	
+	
+	
+	public String getNumero() {
+		return numero;
+	}
+
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public double getLimite() {
+		return limite;
+	}
+
+	public void setLimite(double limite) {
+		this.limite = limite;
+	}
+
+	public Agencia getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(Agencia agencia) {
+		this.agencia = agencia;
+	}
+
+	public int getIdConta() {
+		return idConta;
+	}
+
+	public void setIdConta(int idConta) {
+		this.idConta = idConta;
+	}
+
 	public void deposita ( double valor ){
 		this.saldo += valor;
 	}
@@ -28,7 +70,7 @@ public class Conta {
 	}
 	
 	public String extrato(){
-		String extrato = "Conta: "+ this.numero +"\nAgência: "+ this.agencia.numero +"\nSaldo: R$"+ df.format(this.saldo) +" \nLimite: R$"+ df.format(this.limite);
+		String extrato = "Conta: "+ this.numero +"\nAgência: "+ this.agencia.getNumero() +"\nSaldo: R$"+ df.format(this.saldo) +" \nLimite: R$"+ df.format(this.limite);
 		return extrato;
 	}
 	

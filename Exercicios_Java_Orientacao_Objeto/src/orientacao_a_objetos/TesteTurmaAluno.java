@@ -11,18 +11,18 @@ public class TesteTurmaAluno {
 		Aluno aluno1 = new Aluno();
 		Turma turma1 = new Turma();
 				
-		aluno1.dataNascimento = sdf.parse("30/03/1993");
-		aluno1.nome = "William";
-		aluno1.rg = "61414145";
+		aluno1.setDataNascimento(sdf.parse("30/03/1993"));
+		aluno1.setNome("William");
+		aluno1.setRg("61414145");
 		
-		turma1.periodo = 'm';
-		turma1.serie = 8;
-		turma1.sigla = "8-B";
-		turma1.tipoEnsino = "Fundamental";
+		turma1.setPeriodo('m');
+		turma1.setSerie(8);
+		turma1.setSigla("8-B");
+		turma1.setTipoEnsino("Fundamental");
 		
-		aluno1.turma = turma1;
+		aluno1.setTurma(turma1);
 		
-		System.out.println("Aluno: "+ aluno1.nome + " data de nascimento: "+ sdf.format(aluno1.dataNascimento) + " rg: "+ aluno1.rg +" série: "+ aluno1.turma.serie +" período: "+ aluno1.turma.periodo +" sigla: "+ aluno1.turma.sigla +" tipo de ensino: "+ aluno1.turma.tipoEnsino);
+		System.out.println("Aluno: "+ aluno1.getNome() + " data de nascimento: "+ sdf.format(aluno1.getDataNascimento()) + " rg: "+ aluno1.getRg() +" série: "+ aluno1.getTurma().getSerie() +" período: "+ aluno1.getTurma().getPeriodo() +" sigla: "+ aluno1.getTurma().getSigla() +" tipo de ensino: "+ aluno1.getTurma().getTipoEnsino());
 		
 	}
 }

@@ -9,18 +9,18 @@ public class TesteGerente {
 		Gerente gerente = new Gerente();
 		Gerente gerente2 = new Gerente();
 		
-		gerente.nome = "William";
-		gerente.salario = 2500d;
+		gerente.setNome("William");
+		gerente.setSalario(2500d);
 				
 		gerente.aumentaSalario();
 		
-		gerente2.nome = "Andiara";
-		gerente2.salario = 2500d;
+		gerente2.setNome("Andiara");
+		gerente2.setSalario(2500d);
 				
 		gerente2.aumentaSalario(25);
 		
-		System.out.println("Gerente:" + gerente.nome + " salário com aumento: R$"+ df.format(gerente.salario));
-		System.out.println("Gerente:" + gerente2.nome + " salário com aumento: R$"+ df.format(gerente2.salario));
+		System.out.println("Gerente:" + gerente.getNome() + " salário com aumento: R$"+ df.format(gerente.getSalario()));
+		System.out.println("Gerente:" + gerente2.getNome() + " salário com aumento: R$"+ df.format(gerente2.getSalario()));
 	}
 
 }

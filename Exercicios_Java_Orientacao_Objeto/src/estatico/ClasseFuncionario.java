@@ -10,6 +10,14 @@ public class ClasseFuncionario {
 	
 		
 		System.out.println("Vale alimentação diário: "+ Funcionario.consultaVR());
+		
+		Funcionario.aumentarVR(15);
+		
+		System.out.println("Vale alimentação diário: "+ Funcionario.consultaVR());
+		
+		Funcionario.reduzirVR(15);
+		
+		System.out.println("Vale alimentação diário: "+ Funcionario.consultaVR());
 	}
 
 }
