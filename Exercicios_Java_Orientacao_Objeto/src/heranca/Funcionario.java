@@ -32,5 +32,9 @@ public class Funcionario {
 		this.salario = salario;
 	}
 	
+	public void aumentarSalario(double taxa){
+		this.salario = salario*((taxa/100)+1);
+		
+	}
 
 }

@@ -13,14 +13,17 @@ public class TesteHeranca {
 		gerente.setSalario(4900d);
 		gerente.setUsuario("jose");
 		gerente.setSenha("pudim");
+		gerente.aumentarSalario(10);
 		
 		Telefonista telefonista = new Telefonista(57);
 		telefonista.setNome("Maria");
 		telefonista.setSalario(1500d);
+		telefonista.aumentarSalario(10);
 		
 		Secretaria secretaria = new Secretaria("66");
 		secretaria.setNome("Cláudia");
 		secretaria.setSalario(1550d);
+		secretaria.aumentarSalario(10);
 		
 		
 	}
