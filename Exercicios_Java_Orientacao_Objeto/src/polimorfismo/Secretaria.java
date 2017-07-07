@@ -1,4 +1,4 @@
-package heranca;
+package polimorfismo;
 
 public class Secretaria extends Funcionario {
 	
