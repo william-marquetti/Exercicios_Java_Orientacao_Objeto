@@ -2,6 +2,13 @@ package classesAbstratas;
 
 import java.text.DecimalFormat;
 
+/**
+ * 
+ * @author William Gustavo Marquetti
+ *
+ * Classe abstrata responsável pela definição da estrutra padrão dos objetos
+ * que se estendem à conta.
+ */
 public abstract class Conta {
 
 	DecimalFormat df = new DecimalFormat("#0.00");
@@ -24,6 +31,14 @@ public abstract class Conta {
 		
 	}
 	
+	/**
+	 *  Construtor completo
+	 *  
+	 * @param numero número da conta (String)
+	 * @param agencia Agência da conta objeto do tipo Agencia
+	 * @param cliente Cliente da conta objeto do tipo Cliente
+	 * @param saldo	saldo da conta (double)
+	 */
 	public Conta(String numero, Agencia agencia, Cliente cliente, double saldo) {
 		this.numero = numero;
 		this.agencia = agencia;
@@ -63,6 +78,12 @@ public abstract class Conta {
 		this.cliente = cliente;
 	}
 	
+	/**
+	 * Método padrão para gerar extratos genéricos de qualquer tipo de conta,
+	 * recebe um objeto do tipo conta como paràmetro.
+	 * 
+	 * @param conta
+	 */
 	public abstract void gerarExtrato(Conta conta);
 
 }

@@ -1,7 +1,17 @@
+/**
+ *  Pacote criado para armazenar as classes referente a arrays
+ */
 package arrays;
 
 import java.util.Arrays;
 
+/**
+ * 
+ * @author William Gustavo Marquetti
+ * 
+ * Classe utilizada para realizar os testes com arrays
+ *
+ */
 public class Classe {
 	
 	public static void main(String[] args) {
