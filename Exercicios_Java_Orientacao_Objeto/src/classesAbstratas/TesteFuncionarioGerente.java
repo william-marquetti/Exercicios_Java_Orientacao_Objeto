@@ -10,5 +10,23 @@ public class TesteFuncionarioGerente {
 		System.out.println(ger1.mostraDados());
 		ger1.calculaBonificacao();
 		System.out.println(ger1.mostraDados());
+		
+
+		/**
+		 * forma utilizada para tratar os erros que o método aumentarSalario() gerar
+		 * 
+		 *	 foi utilizado o "IllegalArgumentException" que não obriga o tratamendo
+		 *	 da exceção, por isso é o utilizado o "catch (IllegalArgumentException e) {}",
+		 *	para tratar o erro neste momento.
+		 *	Se fosse utilizado uma "Exception", o tratamento seria obrigatório.
+		 *
+		 */
+		
+		try{
+			ger1.aumentarSalario(0);
+		} catch (IllegalArgumentException e){
+			System.out.println(e.getMessage());
+		}
+		
 	}
 }

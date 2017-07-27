@@ -46,8 +46,17 @@ public abstract class Funcionario {
 	}
 	
 	public void aumentarSalario(double taxa){
-		this.salario = salario*((taxa/100)+1);
 		
+		if ( taxa <= 0 ){
+			//IllegalArgumentException erro = new IllegalArgumentException("O valor digitado para taxa é inferior ou igual a 0");
+			
+			IllegalArgumentException erro = new IllegalArgumentException("Taxa incorreta! \n Código de erro: 0xf0102");
+			throw erro;
+		} else {
+			this.salario = salario*((taxa/100)+1);
+		}
+		
+				
 	}
 	
 	public abstract void calculaBonificacao();
