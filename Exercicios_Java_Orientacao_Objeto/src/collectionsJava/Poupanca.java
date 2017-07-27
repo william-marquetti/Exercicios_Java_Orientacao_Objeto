@@ -15,9 +15,10 @@ public class Poupanca extends Conta {
 		
 	}
 	
-	public Poupanca(double taxaRendimento) {
+	public Poupanca(double taxaRendimento, String numero) {
 		super();
 		this.taxaRendimento = taxaRendimento;
+		super.setNumero(numero);
 	}
 
 	public double getTaxaRendimento() {
@@ -26,6 +27,7 @@ public class Poupanca extends Conta {
 
 	public void setTaxaRendimento(double taxaRendimento) {
 		this.taxaRendimento = taxaRendimento;
+		
 	}
 
 	@Override
